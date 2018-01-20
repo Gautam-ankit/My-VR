@@ -22,10 +22,23 @@
 							 <img id="bridge" src="bridge.jpg">
 							 <img id="mountain" src="mountain.jpg">
 							 <sound id="riversound" src="rive.mp3">
+							 <img id="city" src="building.jpg">
+
+    						 <img id="city" src="building.jpg">
+    						 <img id="mountain" src="mountain.jpg">
+    						 <img id="lrcity" src="lrcity.jpg">
+    						 <img id="rdcity" src="buildingroad.jpg">
 					</a-assets>
 
 					<a-plane src="#groundTexture" rotation="-90 0 0" width="10000" height="10000"></a-plane>
 	        		
+				<!-- 	Scenes  -->
+					 <a-box position="0 5 -145" rotation="0 0 0" src="#rdcity" width="595" height="40"></a-box>
+ 					 <a-box position="0 5 145" rotation="0 0 0" src="#mountain" width="595" height="40"></a-box>
+					 <a-box position="145 5 75" rotation="0 90 0" src="#lrcity" width="210" height="40"></a-box>
+   					 <a-box position="-145 5 75" rotation="0 90 0" src="#lrcity" width="210" height="40"></a-box>
+   		
+   		
         		<!-- sky of ryan color with some asteriods -->
 				
         	
@@ -76,6 +89,11 @@
                				to="0 -360 0"
                				repeat="indefinite"></a-animation>
 				</a-entity>
+
+
+				 <!-- 360-degree image. -->
+						  <a-videosphere  radius="10000" src="#city" width="1200" height="400"></a-videosphere>
+
 			<!--  bridge over river	-->
 
 					<a-torus src="#bridge" position="0 0.5 -70" arc="180" radius="15" radius-tubular="1.5" rotation="0 90 0" scale="2.5  1  2.5"  width="5120"></a-torus>
@@ -84,10 +102,10 @@
 
 					<!--	river	-	flowers	-	fields	-->
 
-						<a-box position="0 0 -75" width="570" height="70" rotation="90 0 0" src="#river" sound="src: url(rive.mp3); autoplay : true ; maxDistance: 10; rollOffFactor: 1; refDistance: 1"></a-box>
-						<a-box position="-45.5  -0.5 0" width="50" height="56" rotation="90 0 0" src="#field"></a-box>
-						<a-box position="45.5 -0.5 0" width="50" height="56" rotation="90 0 0" src="#flower"></a-box>
-						<a-box position="0 -0.5 63" width="270" height="70" rotation="90 0 0" src="#mountain"></a-box>
+						<a-box position="0 0 -75" width="570" height="70" rotation="90 0 0" src="#river" sound="src: url(rive.mp3); autoplay : true ; maxDistance: 10; rollOffFactor: 1; refDistance: 1; loop:true"></a-box>
+						<a-box position="-55.5  -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
+						<a-box position="55.5 -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
+						<a-box position="0 -0.5 63" width="270" height="70" rotation="90 0 0" src="#flower"></a-box>
         	<!-- 	doors and windows codes	-->
 
 
@@ -111,61 +129,62 @@
 			
 
 			<!--   Road code initilization  -->
-				<a-plane position="0 0 -5" width="6" height="55" rotation="-90 0 0" src="#road"></a-plane>
-				<a-plane position="0 0 -25" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 -20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 -15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 -10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
+				<a-box position="0 -0.5 -5" width="6" height="55" rotation="-90 0 0" src="#road"></a-box>
+				
+				<a-box position="0 -0.45 -25" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
 
-				<a-plane position="0 0 -5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 0" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
-				<a-plane position="0 0 20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-plane>
+				<a-box position="0 -0.45 -5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 0" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
 
 			<!--   Left/right road code at location -5 -->
-				<a-plane position="6 0 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
-				<a-plane position="-6 0 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
+				<a-box position="6 -0.5 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
 						
 						<!-- white lines in left road-->
-						<a-plane position="7 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-7 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="12 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-12 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="17 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-17 0 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
+						<a-box position="7 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
 		
 
 			<!--	left-right road code	-->
-				<a-plane position="6 0 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
-				<a-plane position="-6 0 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
+				<a-box position="6 -0.5 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
 					<!--	white strups-->
 
-					<a-plane position="7 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-7 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="12 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-12 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="17 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-17 0 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
+						<a-box position="7 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
 		
 			<!--   Left/right road code at location -5 -->
-				<a-plane position="6 0 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
-				<a-plane position="-6 0 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-plane>
+				<a-box position="6 -0.5 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
 						<!-- white lines in left/right road-->
-						<a-plane position="7 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-7 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="12 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-12 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="17 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
-						<a-plane position="-17 0 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-plane>
+						<a-box position="7 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
 		
 			<!---  yellow lines initilization-->			
-					<a-plane position="2.6 0 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-plane>
-					<a-plane position="-2.6 0 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-plane>
+					<a-box position="2.6 -0.45 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-box>
+					<a-box position="-2.6 -0.45 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-box>
 				
-					<a-plane position="2.6 0 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-plane>
-					<a-plane position="-2.6 0 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-plane>
+					<a-box position="2.6 -0.45 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-box>
+					<a-box position="-2.6 -0.45 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-box>
 				
 		<!--  Footpath initialization-->
 				
@@ -664,6 +683,7 @@
 				  <a-box position="20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
 				<a-box position="-20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
 
+				 <a-ring position="13 0.5 -5" rotation="0 -90 0" color="white"></a-ring>
 				 
 				 
 
