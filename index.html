@@ -19,32 +19,56 @@
 							 <img id="river" src="river.jpg">
 							 <img id="windows" src="window.jpg">
 							 <img id="railway" src="railway.jpg">
-							 <img id="bridge" src="bridge.jpg">
+							 <img id="floor" src="floor.jpg">
 							 <img id="mountain" src="mountain.jpg">
 							 <sound id="riversound" src="rive.mp3">
 							 <img id="city" src="building.jpg">
-
+							 <video id="videos" src="videoplayback.mp4" autoplay="true" loop="true" volume="0">
     						 <img id="city" src="building.jpg">
+    						 <img id="bridge" src="bridge.jpg">
     						 <img id="mountain" src="mountain.jpg">
     						 <img id="lrcity" src="lrcity.jpg">
     						 <img id="rdcity" src="buildingroad.jpg">
+    						 <img id="cllg1" src="sait1.jpg">
+    						 <img id="cllg2" src="sait2.jpg">
+    						 <img id="cllg3" src="sait3.jpg">
+    						 <img id="bed1" src="bed.jpg">
+    						 <img id="mbed" src="mbed.jpg">
+    						 <img id="doors" src="door.jpg">
 					</a-assets>
 
 					<a-plane src="#groundTexture" rotation="-90 0 0" width="10000" height="10000"></a-plane>
 	        		
+				<!-- 	interior home designing	-->
+
+					<a-curvedimage position="-14 0 15" height="12.0" radius="5.7" theta-length="72"
+		                 rotation="0 -100 0" scale="0.8 0.8 0.8" src="#cllg2"></a-curvedimage>
+					<a-curvedimage position="-14 0 5" height="12.0" radius="5.7" theta-length="75"
+                 		 rotation="0 -150 0" scale="0.8 0.8 0.8" src="#cllg2"></a-curvedimage>
+                 	<a-curvedimage position="20 0 15" height="12.0" radius="5.7" theta-length="79"
+		                 rotation="0 -110 0" scale="0.8 0.8 0.8" src="#cllg3"></a-curvedimage>
+					<a-curvedimage position="20 0 5" height="12.0" radius="5.7" theta-length="79"
+                 		 rotation="0 -110 0" scale="0.8 0.8 0.8" src="#cllg3"></a-curvedimage>
+
+                 	<a-box position="18 0.6 -15" rotation="90 0 0" width="2"  height="4" src="#bed1"></a-box>
+                 	<a-box position="18.6 0.6 -15" rotation="0 90 0" width="4" height="4" src="#bed1"></a-box>
+
+                 	<a-box position="-18 0.6 -15" rotation="90 0 0" width="2"  height="4" src="#bed1"></a-box>
+                 	<a-box position="-18.6 0.6 -15" rotation="0 90 0" width="4" height="4" src="#bed1"></a-box>
+
+                 	<a-box position="15 0.5 -15" rotation="90 0 0" width="2" height="3" src="#mbed"></a-box>
+                 	<a-box position="-15 0.5 -15" rotation="90 0 0" width="2" height="3" src="#mbed"></a-box>
+				
 				<!-- 	Scenes  -->
 					 <a-box position="0 5 -145" rotation="0 0 0" src="#rdcity" width="595" height="40"></a-box>
  					 <a-box position="0 5 145" rotation="0 0 0" src="#mountain" width="595" height="40"></a-box>
 					 <a-box position="145 5 75" rotation="0 90 0" src="#lrcity" width="210" height="40"></a-box>
    					 <a-box position="-145 5 75" rotation="0 90 0" src="#lrcity" width="210" height="40"></a-box>
    		
-   		
         		<!-- sky of ryan color with some asteriods -->
 				
-        	
 				<a-sky src="#skytexture" rotation="0 -90 0"></a-sky>
 				
-
 				<a-entity>
   						<a-plane position="5 30 -1" color="blue"></a-plane>
   						<a-plane position="15 31 2" color="red"></a-plane>
@@ -58,8 +82,7 @@
   						<a-plane position="-45 36 -6" color="grey"></a-plane>
   						<a-plane position="-55 18 -2" color="orange"></a-plane>
   						<a-plane position="-65 20 -11" color="purple"></a-plane>
-  						
-  						
+  					
   						<a-animation attribute="rotation"
                				easing="linear"
                				dur="10000"
@@ -81,7 +104,6 @@
   						<a-plane position="-55 18 -2" color="orange"></a-plane>
   						<a-plane position="-65 20 -11" color="purple"></a-plane>
   						
-  						
   						<a-animation attribute="rotation"
                				easing="linear"
                				dur="10000"
@@ -91,9 +113,19 @@
 				</a-entity>
 
 
-				 <!-- 360-degree image. -->
-						  <a-videosphere  radius="10000" src="#city" width="1200" height="400"></a-videosphere>
+			<!--	floor of the buildings	 -->
 
+				<a-box position="13 -0.4 -15" rotation="90 0 0" width="15" height="12" src="#floor"></a-box>
+				<a-box position="-13 -0.4 -15" rotation="90 0 0" width="15" height="12" src="#floor"></a-box>
+				<a-box position="13 -0.4 10" rotation="90 0 0" width="15" height="23" src="#floor"></a-box>
+				<a-box position="-13 -0.4 10" rotation="90 0 0" width="15" height="23" src="#floor"></a-box>
+
+			<!--	video for father	-->
+				<a-box position="0 5 -15" rotation="0 0 0" width="10" height="15" src="#videos">
+   						<a-animation easing="linear" attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+   				</a-box>
+
+				 
 			<!--  bridge over river	-->
 
 					<a-torus src="#bridge" position="0 0.5 -70" arc="180" radius="15" radius-tubular="1.5" rotation="0 90 0" scale="2.5  1  2.5"  width="5120"></a-torus>
@@ -106,17 +138,23 @@
 						<a-box position="-55.5  -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
 						<a-box position="55.5 -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
 						<a-box position="0 -0.5 63" width="270" height="70" rotation="90 0 0" src="#flower"></a-box>
+
         	<!-- 	doors and windows codes	-->
 
+        	<a-box position="13 3 -8.4" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+        	<a-box position="-13 3 -8.4" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
 
-        	<a-plane position="-5.4 3.5 -10" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-plane>
-        	<a-plane position="-5.4 3.5 -15" rotation="0 90 0" src="#windows" width="1" height="2"></a-plane>
-        	<a-plane position="-5.4 3.5 -20" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-plane>
+        	<a-box position="13 3 -01.6" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+        	<a-box position="-13 3 -01.6" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+
+        	<a-box position="-5.95 3.5 -10" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 -15" rotation="0 90 0" src="#windows" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 -20" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
         	
-        	<a-plane position="-5.4 3.5 3" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-plane>
-        	<a-plane position="-5.4 3.5 8" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-plane>
-        	<a-plane position="-5.4 3.5 13" rotation="0 90 0" src="#windows" width="1" height="2"></a-plane>
-        	<a-plane position="-5.4 3.5 18" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-plane>
+        	<a-box position="-5.95 3.5 3" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 8" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 13" rotation="0 90 0" src="#windows" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 18" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
         	
         	<a-box position="5.95 3.5 -10" rotation="0 -90 0" src="#windows" width="1" height="2"></a-box> 
         	<a-box position="5.95 3.5 -15" rotation="0 -90 0" src="#windows" width="1" height="2"></a-box> 
@@ -681,11 +719,7 @@
 				 width="15" height="10"></a-box>
 
 				  <a-box position="20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
-				<a-box position="-20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
-
-				 <a-ring position="13 0.5 -5" rotation="0 -90 0" color="white"></a-ring>
-				 
-				 
+				<a-box position="-20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>				 
 
 		</a-scene>
 	</body>
